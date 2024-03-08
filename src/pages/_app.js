@@ -4,16 +4,20 @@ import { useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import "@/styles/styles.scss";
+import AudioPlayer from "@/components/audio/AudioPlayer";
 // import Header from "@/components/header";
 // import StickyCursor from "@/components/custom/stickyCursor/stickyCursor";
 export default function App({ Component, pageProps, router }) {
 
   return (
     <div className="main">
-
+<div className="fixed z-[100] top-[90vh] right-[3rem]">
+          <AudioPlayer src="/lofi.mp3"/>
+          </div>
       <AnimatePresence mode="wait">
      
         <Component key={router.route} {...pageProps} />
+        
       </AnimatePresence>
     </div>
   );

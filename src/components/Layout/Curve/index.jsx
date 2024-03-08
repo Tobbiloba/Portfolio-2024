@@ -86,9 +86,9 @@ export default function Curve({ children, backgroundColor }) {
       
       </>
      }
-<div className="fixed z-[100] top-[90vh] right-[3rem]">
+{/* <div className="fixed z-[100] top-[90vh] right-[3rem]">
           <AudioPlayer src="/lofi.mp3"/>
-          </div>
+          </div> */}
     </div>
   );
 }

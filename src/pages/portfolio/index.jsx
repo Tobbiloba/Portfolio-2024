@@ -1,6 +1,5 @@
 import Curve from '@/components/Layout/Curve'
 import Head from 'next/head'
-import ContactScreen from '@/components/testing/src/components/Contact'
 export default function Contact() {
   return (
     <>
@@ -11,7 +10,6 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve backgroundColor="#0f172a">
-        <ContactScreen />
       </Curve>
     </>
   )

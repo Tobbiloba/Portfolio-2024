@@ -140,8 +140,9 @@ const ContactScreen = () => {
                     </motion.svg>
                     */}
                 </div>
-                <div className={styles.nav}>
+                {/* <div className={styles.nav}>
                     <Rounded>
+                    
                         <p>info@dennissnellenberg.com</p>
                     </Rounded>
                     <Rounded>
@@ -176,7 +177,7 @@ const ContactScreen = () => {
                             <p>Linkedin</p>
                         </Magnetic>
                     </div>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     )

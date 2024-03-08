@@ -37,7 +37,7 @@ const Header = forwardRef(function index(props, ref) {
 
           <Magnetic>
             <div className="relative z-100">
-              <div className="text-white relative z-[100]">
+              <div className="text-white relative  z-[100]">
                 <Link href="/about">About</Link>
               </div>
 
