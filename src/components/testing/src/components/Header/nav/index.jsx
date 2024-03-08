@@ -122,6 +122,7 @@ export default function Index() {
                 key={index} 
                 data={{...data, index}} 
                 isActive={selectedIndicator == data.href} 
+                
                 setSelectedIndicator={setSelectedIndicator}>
               </Link>
             })

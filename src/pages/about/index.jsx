@@ -4,7 +4,9 @@ import Projects from "@/components/custom/Projects";
 import Head from "next/head";
 import Experience from "@/components/custom/Projects/components/experiences";
 import Tool from "@/components/custom/Projects/components/tools";
-const RoundedText = ({text}) => {
+import Image from "next/image";
+import ProfileSlider from "@/components/custom/Projects/profile carousel";
+const RoundedText = ({ text }) => {
   const svgStyles = {
     width: "100px", // Set the width and height as needed
     height: "100px",
@@ -60,9 +62,31 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve backgroundColor={"#0f172a"}>
-        <div className="flex justify-center px-[1rem] rubik">
-          <div className="relative z-10 container flex flex-col lg:flex-row gap-12">
-            <div className="lg:w-4/12 relative">
+        <div className="flex justify-center madimi px-[1rem]">
+          <div className="relative z-10 container  flex flex-col items-center justify- gap-12">
+            <div className="relative  h-4">
+              <Image
+                src="/images/tag.svg"
+                alt=""
+                width={60}
+                height={60}
+                className="absolute rotate-45 -right-5"
+              />
+              <h1 className="border text-white py-2 px-10 rounded-full text-2xl">
+                Hello
+              </h1>
+            </div>
+
+            <h1 className="text-white madimi text-start flex text-[4rem] text-wrap flex-wrap md:text-[6rem] lg:text-[5rem] xl:text-[7rem] leading-[9rem] mt-6">
+              I'm <span className="text-primary major ml-6">Oluwatobiloba,</span>
+              A Fullstack Developer
+            </h1>
+          </div>
+        </div>
+        <ProfileSlider />
+        <div className="flex mt-24 justify-center px-[1rem] rubik">
+          <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
+            <div className="xl:w-4/12 relative">
               <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
                 Services
               </p>
@@ -76,38 +100,38 @@ export default function About() {
                 customers and growing sales.
               </p>
               <div className="relative h-40">
-                <RoundedText text="- services - services - services -"/>
+                <RoundedText text="- services - services - services -" />
               </div>
             </div>
-            <div className=" lg:w-8/12">
+            <div className=" xl:w-8/12">
               <Projects />
             </div>
           </div>
         </div>
 
         <div className="flex justify-center madimi mt-20 lg:mt-40">
-          <div className="relative z-10 container flex gap-12 flex-col lg:flex-row ">
-            <div className="lg:w-4/12 relative">
+          <div className="relative z-10 container flex gap-12 flex-col xl:flex-row ">
+            <div className="xl:w-4/12 relative">
               {/* <div> */}
-                <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
-                  Experience
-                </p>
-                <h1 className="text-[3.5rem] md:text-[5rem] ml-[2rem] lg:ml-0 text-primary rubik">
-                  Job
-                  <br />
-                  Experience
-                </h1>
-                <p className="mt-6 text-white major">
-                  A specialist in UI/UX design. A passion of mine is designing
-                  and solving problems through user experience, primarily on
-                  modern UI.
-                </p>
+              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
+                Experience
+              </p>
+              <h1 className="text-[3.5rem] md:text-[5rem] ml-[2rem] lg:ml-0 text-primary rubik">
+                Job
+                <br />
+                Experience
+              </h1>
+              <p className="mt-6 text-white major">
+                A specialist in UI/UX design. A passion of mine is designing and
+                solving problems through user experience, primarily on modern
+                UI.
+              </p>
               {/* </div> */}
               <div className="relative h-32 lg:h-40">
-                <RoundedText text="- experience - experience - experience"/>
+                <RoundedText text="- experience - experience - experience" />
               </div>
             </div>
-            <div className=" lg:w-8/12">
+            <div className=" xl:w-8/12">
               <p className="text-white madimi text-4xl mb-8">Experience</p>
               <Experience />
             </div>
@@ -115,8 +139,8 @@ export default function About() {
         </div>
 
         <div className="flex justify-center madimi mt-20 lg:mt-40 mb-[40rem]">
-          <div className="relative z-10 container flex flex-col lg:flex-row gap-12">
-            <div className="lg:w-4/12 relative">
+          <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
+            <div className="xl:w-4/12 relative">
               <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
                 Tools
               </p>
@@ -134,7 +158,7 @@ export default function About() {
                 <RoundedText />
               </div>
             </div>
-            <div className=" lg:w-8/12">
+            <div className=" xl:w-8/12">
               <p className="text-white madimi text-4xl mb-8">Experience</p>
               <Tool />
             </div>

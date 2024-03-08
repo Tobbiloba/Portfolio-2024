@@ -19,7 +19,7 @@ const Preloader = () => {
         if(index == words.length - 1) return;
         setTimeout( () => {
             setIndex(index + 1)
-        }, index == 0 ? 1000 : 150)
+        }, index == 0 ? 100 : 150)
     }, [index])
 
     const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`
@@ -40,14 +40,18 @@ const Preloader = () => {
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
             {dimension.width > 0 && 
             <>
-             <div className="lines absolute w-[100vw] h-[100vh] left-0 top-0 z-[10]">
+             {/* <div className="lines absolute w-[100vw] h-[100vh] left-0 top-0 z-[10]">
   <div className="line"></div>
   <div className="line"></div>
   <div className="line"></div>
-</div> 
-          
+</div>  */}
+<div className={styles.wrapper}>
+      {[...Array(15)].map((_, index) => (
+        <div key={index} className={`dot-${index + 1}`}></div>
+      ))}
+    </div>
         {/* </div></motion.div> */}
-                <motion.p variants={opacity} initial="initial" animate="enter" className='madimi text-primary'><span className='bg-primary'></span>{words[index]}</motion.p>
+                <motion.p variants={opacity} initial="initial" animate="enter" className='rubik text-white'><span className='bg-primary'></span>{words[index]}</motion.p>
                 <svg>
                     <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>

@@ -11,7 +11,7 @@ import AudioPlayer from "@/components/audio/AudioPlayer";
 // import Description from "@/components/testing/src/components/Description";
 // import Projects from "@/components/testing/src/components/Projects";
 // import SlidingImages from "@/components/testing/src/components/SlidingImages";
-
+import styles from "../components/custom/Preloader/style.module.scss"
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -42,19 +42,19 @@ export default function Home() {
       
       {isLoading ? <Preloader /> : 
       <Curve backgroundColor="#0f172a">
+        <div className={styles.wrapper}>
+      {[...Array(10)].map((_, index) => (
+        <div key={index} className={`dot-${index + 1}`}></div>
+      ))}
+    </div>
         <div className=" h-[100vh] w-[100%] flex items- justify-between">
            <HomeHero />
-           {/* <p className="border text-white">{`${name[0]}`}</p> */}
-            {/* <HomeHero /> */}
-            {/* <Landing /> */}
-            {/* <Description /> */}
-            {/* <Projects /> */}
-            {/* <SlidingImages /> */}
-            <div className="lines">
+        
+            {/* <div className="lines">
   <div className="line"></div>
   <div className="line"></div>
   <div className="line"></div>
-</div> 
+</div>  */}
 
         </div>
         

@@ -10,21 +10,21 @@ import Image from 'next/image';
 const projects = [
   {
     title: "Frontend / Mobile Developer",
-    src: "frontend.png",
+    src: "exp1.png",
     color: "#000000",
     company: 'Inframent',
     duration: 'Sept 2023 - Jan 2024'
   },
   {
     title: "Frontend Developer",
-    src: "mobile.jpg",
+    src: "exp2.png",
     color: "#EFE8D3",
     company: 'Bitshub',
     duration: 'Feb 2023 - Sept 2024'
   },
   {
     title: "Frontend Developer",
-    src: "backend.png",
+    src: "exp3.png",
     color: "#8C8C8C",
     company: 'Freelance',
     duration: 'January 2024 - FEb 2024'

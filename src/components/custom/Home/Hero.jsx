@@ -45,9 +45,9 @@ export const HomeHero = () => {
   }, []);
 
   return (
-    <div className=" h-fit relative major text-light">
+    <div className=" h-fit px-[1rem] relative major text-light">
       <div className="h_container font_apoc flex flex-col items-center  px-2">
-        <h1 className="h_title  relative w-full text- text-[13vw] font-light uppercase leading-[90%] lg:text-[7vw] ">
+        <h1 className="h_title  relative w-full text- text-[3rem] font-light uppercase leading-[4rem] lg:leading-[100%] lg:text-[7vw] ">
           <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
             <span className=" inline-block translate-y-full pb-1.5 pt-6 will-change-transform ">
               GR33<span className="madimi text-primary">T</span>1<span className="madimi text-primary">N</span>G$!&nbsp;
@@ -62,6 +62,7 @@ export const HomeHero = () => {
               &nbsp;W3<span className="madimi text-primary">LC</span>0M<span className="madimi text-primary"></span>3
             </span>
           </span>
+          <br className="flex lg:hidden"/>
           <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
             <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
               &nbsp;<span className="madimi text-primary">T</span>0
@@ -167,11 +168,11 @@ export const HomeHero = () => {
           </span>
         </h1> */}
 
-        <h1 className="h_title mt-8 top-4 flex w-full flex-col items-center justify- text-center text-[15vw] font-light uppercase leading-[90%] lg:flex-row lg:text-[8.7vw] ">
+        <h1 className="h_title mt-8 top-4 flex w-full flex-col lg:items-center justify- lg:text-center text-[15vw] font-light uppercase leading-[90%] lg:flex-row lg:text-[8.7vw] ">
           <Magnetic>
             <div
               ref={heroInfiniteRef}
-              className="font_aeonik flex justify-center items-center bottom-[-25vw] left-[35%] ml-10 -mr-10 h-8 w-40 overflow-hidden rounded-full border border-primary text-xs font-normal uppercase opacity-0 lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] lg:h-14 lg:w-[16vw] lg:text-xl lg:leading-10 "
+              className="font_aeonik flex justify-center items-center bottom-[-25vw] left-[35%] ml-10 -mr-10 w-72 overflow-hidden rounded-full border border-primary font-normal uppercase opacity-0 lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] h-14 lg:w-[16vw] text-xl lg:leading-10 "
             >
               <marquee direction="left" behavior="scroll" scrollamount="5">
                 <div className="group mont flex gap-8 h-full cursor-pointer items-center whitespace-nowrap">
