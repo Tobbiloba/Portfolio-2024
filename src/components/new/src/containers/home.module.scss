@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import "./_mixins.module.scss";
+@import url("https://fonts.googleapis.com/css?family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+}
+
+// :root {
+//   --main-color: #394437;
+//   --secondary-color: #3d5549;
+//   --bg-color: #acbe9e;
+//   --loader-color: #6c8c77;
+// }
+
+
+.loaderContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  background-color: red;
+
+ 
+}
+.counterContainer {
+  overflow: hidden;
+  height: 30vw;
+  min-height: 30vw;
+}
+
+
+.heroContainer {
+  position: relative;
+  height: 100vh;
+  
+ 
+}
+
+
+.heroTitle {
+  position: absolute;
+  bottom: 5vw;
+  left: 5vw;
+
+  font-size: clamp(72px, 15vw, 15vw);
+  color: white;
+  font-family: "Oswald", sans-serif;
+
+  text-transform: lowercase;
+  font-weight: 100;
+}
+
+.introContainer {
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
