@@ -78,7 +78,7 @@ export default function About() {
             </div>
 
             <h1 className="text-white madimi text-start flex text-[4rem] text-wrap flex-wrap md:text-[6rem] lg:text-[5rem] xl:text-[7rem] leading-[9rem] mt-6">
-              I'm <span className="text-primary major ml-6">Oluwatobiloba,</span>
+              I&apos;m <span className="text-primary major ml-6">Oluwatobiloba,</span>
               A Fullstack Developer
             </h1>
           </div>

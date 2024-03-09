@@ -21,13 +21,13 @@ const ProfileSlider = () => {
         <div>
         <div className={`${styles.content} relative`}>
             <div className="absolute top-0 left-0 h-[100%] w-[100%] bg-black/20"></div>
-            <h2>"Summer LOL😂😂"</h2>
+            <h2>&quot;Summer LOL😂😂&quot;</h2>
           </div>
         </div>
         <div>
         <div className={`${styles.content} relative`}>
           <div className="absolute top-0 left-0 h-[100%] w-[100%] bg-black/20"></div>
-            <h2 className="text-center">"Capturing a photo alongside SIM SHAGAYA, the founder of MIVA UNIVERSITY."</h2>
+            <h2 className="text-center">&quot;Capturing a photo alongside SIM SHAGAYA, the founder of MIVA UNIVERSITY.&quot;</h2>
           </div>
         </div>
       </div>
