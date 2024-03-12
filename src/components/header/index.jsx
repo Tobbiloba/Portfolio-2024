@@ -65,7 +65,6 @@ const Header = forwardRef(function index(props, ref) {
           </div>
         </Magnetic>
       </div>
-      {/* <SpringButton >Hire Me</SpringButton> */}
      {
       !isMobile &&  <div className="flex justify-end">
       <RoundedButton>Hire Me</RoundedButton>
