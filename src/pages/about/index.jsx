@@ -62,7 +62,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve backgroundColor={"#0f172a"}>
-        <div className="flex justify-center madimi px-[1rem]">
+        <div className="flex  justify-center madimi px-[1rem]">
           <div className="relative z-10 container  flex flex-col items-center justify- gap-12">
             <div className="relative  h-4">
               <Image
@@ -77,9 +77,9 @@ export default function About() {
               </h1>
             </div>
 
-            <h1 className="text-white madimi text-start flex text-[4rem] text-wrap flex-wrap md:text-[6rem] lg:text-[5rem] xl:text-[7rem] leading-[9rem] mt-6">
-              I&apos;m <span className="text-primary major ml-6">Oluwatobiloba,</span>
-              A Fullstack Developer
+            <h1 className="text-white major text-center flex text-[4rem] text-wrap flex-wrap md:text-[6rem] lg:text-[4.5rem] xl:text-[6rem] leading-[9rem] mt-6">
+              I&apos;m Oluwatobiloba,
+             <br /> A Fullstack Developer
             </h1>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function About() {
           <div className="relative z-10 container flex gap-12 flex-col xl:flex-row ">
             <div className="xl:w-4/12 relative">
               {/* <div> */}
-              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
+              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 major">
                 Experience
               </p>
               <h1 className="text-[3.5rem] md:text-[5rem] ml-[2rem] lg:ml-0 text-primary rubik">
@@ -132,13 +132,12 @@ export default function About() {
               </div>
             </div>
             <div className=" xl:w-8/12">
-              <p className="text-white madimi text-4xl mb-8">Experience</p>
               <Experience />
             </div>
           </div>
         </div>
 
-        <div className="flex justify-center madimi mt-20 lg:mt-40 mb-[40rem]">
+        <div className="flex justify-center madimi mt-20 lg:mt-40">
           <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
             <div className="xl:w-4/12 relative">
               <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">

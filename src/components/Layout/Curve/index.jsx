@@ -27,10 +27,10 @@ export default function Curve({ children, backgroundColor }) {
     width: null,
     height: null,
   });
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     function resize() {
-      setLoading(false)
+      setLoading(false);
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
@@ -41,7 +41,6 @@ export default function Curve({ children, backgroundColor }) {
     return () => {
       window.removeEventListener("resize", resize);
     };
-
   }, []);
 
   const stickyElement1 = useRef(null);
@@ -54,39 +53,38 @@ export default function Curve({ children, backgroundColor }) {
       className="page curve z-100 p-0 h-[100%] relative min-h-[100vh] max-w-[100vw] overflow-hidden"
       style={{ backgroundColor }}
     >
-      {
-        loading && <div className="fixed top-0 z-[100] left-0 bg-black w-[100vw] h-[100vh]"></div>
-      }
+      {loading && (
+        <div className="fixed top-0 z-[100] left-0 bg-black w-[100vw] h-[100vh]"></div>
+      )}
       <div
         style={{ opacity: dimensions.width == null ? 1 : 0 }}
         className="background border z-100"
       />
-   
+
       <div className="relative z-[100]">
         {dimensions.width != null && <SVG {...dimensions} />}
       </div>
-     {
-      !loading && <>
-       <div className="relative z-50">
-      <Header
-        ref={stickyElement1}
-        secondRef={stickyElement2}
-        thirdRef={stickyElement3}
-        fourthRef={stickyElement4}
-      />
-      </div>
-      <StickyCursor stickyElement={stickyElement1} />
-      <StickyCursor stickyElement={stickyElement2} />
-      <StickyCursor stickyElement={stickyElement3} />
-      <StickyCursor stickyElement={stickyElement4} />
-     
-      <div className="p-0 relative w-[100vw] right-[2.65rem]">
-      {children}
-      </div>
-      
-      </>
-     }
-{/* <div className="fixed z-[100] top-[90vh] right-[3rem]">
+      {!loading && (
+        <>
+          <div className="relative z-50 w-[100vw] lg:w-[100%] right-[2.5rem] lg:right-0">
+            <Header
+              ref={stickyElement1}
+              secondRef={stickyElement2}
+              thirdRef={stickyElement3}
+              fourthRef={stickyElement4}
+            />
+          </div>
+          <StickyCursor stickyElement={stickyElement1} />
+          <StickyCursor stickyElement={stickyElement2} />
+          <StickyCursor stickyElement={stickyElement3} />
+          <StickyCursor stickyElement={stickyElement4} />
+
+          <div className="p-0 relative w-[100vw] right-[2.65rem]">
+            {children}
+          </div>
+        </>
+      )}
+      {/* <div className="fixed z-[100] top-[90vh] right-[3rem]">
           <AudioPlayer src="/lofi.mp3"/>
           </div> */}
     </div>

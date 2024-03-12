@@ -9,15 +9,18 @@ export default function Index() {
 
   const curve = {
     initial: {
-        d: initialPath
+        d: initialPath,
+        background: "white"
     },
     enter: {
         d: targetPath,
-        transition: {duration: 1, ease: [0.76, 0, 0.24, 1]}
+        transition: {duration: 1, ease: [0.76, 0, 0.24, 1]},
+        background: "white"
     },
     exit: {
         d: initialPath,
-        transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]}
+        transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]},
+        background: "white"
     }
   }
 

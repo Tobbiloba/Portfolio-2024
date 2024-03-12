@@ -26,7 +26,7 @@ const Magnetic = ({children}) => {
             onMouseLeave={reset}
             animate={{x, y}}
             transition={{type: "spring", stiffness: 350, damping: 5, mass: 0.5}}
-            className='h-[3rem]'
+            className='h-[2.5rem]'
         >
             {children}
         </motion.div>

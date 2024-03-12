@@ -10,8 +10,8 @@ export default function index({index, title, manageModal, company, duration}) {
            <div className='flex items- gap-6'>
             <p>{duration}</p>
  <div>
- <h2 className='text-4xl'>{title}</h2>
- <p className='mt-4'>{company}</p>
+ <h2 className='text-4xl major'>{title}</h2>
+ <p className='mt-4 major'>{company}</p>
  </div>
            </div>
            

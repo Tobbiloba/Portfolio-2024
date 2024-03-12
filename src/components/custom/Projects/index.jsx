@@ -86,9 +86,7 @@ const Projects = () => {
         })
       }
     </div>
-    <Rounded>
-      <p>More work</p>
-    </Rounded>
+  
     <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
             <div style={{top: index * -100 + "%"}} className={styles.modalSlider}>

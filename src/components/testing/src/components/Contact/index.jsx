@@ -117,20 +117,10 @@ const ContactScreen = () => {
         <motion.div style={{ y }} ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
-                    <span>
-                        <div className={styles.imageContainer}>
-                            <Image
-                                fill={true}
-                                alt={"image"}
-                                src={`/images/frontend.jpg`}
-                            />
-                        </div>
-                        <h2>Lets work</h2>
-                    </span>
-                    <h2>together</h2>
+                    
                     <motion.div style={{ x }} className={styles.buttonContainer}>
                         <Rounded backgroundColor={"#fd7e14"} className={styles.button}>
-                            <p>Get in touch</p>
+                            <p className='major'>Get in touch</p>
                         </Rounded>
                     </motion.div>
                     {/* Uncomment this part when needed */}
@@ -140,44 +130,35 @@ const ContactScreen = () => {
                     </motion.svg>
                     */}
                 </div>
-                {/* <div className={styles.nav}>
+                <div className={styles.nav}>
                     <Rounded>
                     
-                        <p>info@dennissnellenberg.com</p>
+                        <p>tobiloba.a.salau@gmail.com</p>
                     </Rounded>
                     <Rounded>
-                        <p>+31 6 27 84 74 30</p>
+                        <p>+234 70 8455 7988</p>
                     </Rounded>
                 </div>
                 <div className={styles.info}>
-                    <div>
-                        <span>
-                            <h3>Version</h3>
-                            <p>2022 © Edition</p>
-                        </span>
-                        <span>
-                            <h3>Version</h3>
-                            <p>11:49 PM GMT+2</p>
-                        </span>
-                    </div>
-                    <div>
+                  
+                    <div className='major'>
                         <span>
                             <h3>socials</h3>
                             <Magnetic>
-                                <p>Awwwards</p>
+                                <p>Github</p>
                             </Magnetic>
                         </span>
                         <Magnetic>
-                            <p>Instagram</p>
-                        </Magnetic>
-                        <Magnetic>
-                            <p>Dribbble</p>
-                        </Magnetic>
-                        <Magnetic>
                             <p>Linkedin</p>
                         </Magnetic>
+                        <Magnetic>
+                            <p>Twitter</p>
+                        </Magnetic>
+                        <Magnetic>
+                            <p>Whatsapp</p>
+                        </Magnetic>
                     </div>
-                </div> */}
+                </div>
             </div>
         </motion.div>
     )

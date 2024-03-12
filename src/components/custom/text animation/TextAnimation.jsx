@@ -42,6 +42,7 @@ const TextScrollAnimation = ({children, style}) => {
     return (
         <div className={styles.sliderContainer}>
             <div ref={slider} className={styles.slider}>
+                <p>LOL</p>
                 <p ref={firstText} className='text-primary opacity-[0.3] text-[100px] rubik md:text-[200px] lg:text-[300px]'>{children}-</p>
                 {/* <p ref={secondText}>Mobile Developer -</p> */}
             </div>

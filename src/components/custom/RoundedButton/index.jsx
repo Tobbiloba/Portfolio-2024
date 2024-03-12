@@ -30,7 +30,7 @@ const RoundedButton = ({children, backgroundColor="#fd7e14", ...attributes}) => 
   return (
     <Magnetic>
       <div className={styles.roundedButton} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
-          <p className='text-white madimi'>
+          <p className='text-white text-[15px] madimi'>
           {
             children
           }
