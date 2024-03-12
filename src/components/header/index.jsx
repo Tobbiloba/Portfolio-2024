@@ -8,6 +8,7 @@ import Link from "next/link";
 import RoundedButton from "../custom/RoundedButton";
 import { useMediaQuery } from "react-responsive";
 const Header = forwardRef(function index(props, ref) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
     <div
