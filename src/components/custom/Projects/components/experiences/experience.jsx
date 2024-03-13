@@ -8,9 +8,9 @@ export default function index({index, title, manageModal, company, duration}) {
         <div onMouseEnter={(e) => {manageModal(true, index, e.clientX, e.clientY)}} onMouseLeave={(e) => {manageModal(false, index, e.clientX, e.clientY)}} className={styles.project}>
            {/* <p className='absolute left-4 text-xl top-[50px]'>0{index + 1}<span className='ml-2 text-primary'>/</span></p> */}
            <div className='flex items- gap-6'>
-            <p>{duration}</p>
+            <p className='text-[15px] lg:text-[17px]'>{duration}</p>
  <div>
- <h2 className='text-4xl major'>{title}</h2>
+ <h2 className='text-2xl lg:text-4xl major'>{title}</h2>
  <p className='mt-4 major'>{company}</p>
  </div>
            </div>

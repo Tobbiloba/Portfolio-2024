@@ -1,47 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kode+Mono:wght@400..700&family=Madimi+One&family=Major+Mono+Display&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Scribble&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kode+Mono:wght@400..700&family=Madimi+One&family=Major+Mono+Display&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Scribble&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 .montserrat {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-style: normal;
-  }
-  
-  .mont {
-    font-family: "Montserrat Subrayada", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+  font-family: "Montserrat Alternates", sans-serif;
+  font-style: normal;
+}
 
-  .indie {
-    font-family: "Indie Flower", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+.mont {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.indie {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .madimi {
-    font-family: "Madimi One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+.madimi {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.rubik {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.major {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .rubik {
-    font-family: "Rubik Scribble", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .major {
-    font-family: "Major Mono Display", monospace;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-/* Style the scrollbar for webkit-based browsers */
 body::-webkit-scrollbar {
   width: 10px; /* Set the width of the scrollbar */
   padding: 5px;
@@ -56,8 +50,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: #f1f1f1; /* Set the color of the scrollbar track */
 }
-
-
 
 @keyframes glowing {
   0% {
@@ -79,28 +71,15 @@ body::-webkit-scrollbar-track {
   animation: glowing 2s infinite; /* Adjust the duration as needed */
 }
 
-
 .heroCardBg {
-  background: rgb(2,6,23);
-background: linear-gradient(93deg, rgba(2,6,23,1) 0%, rgb(5, 8, 49) 44%, rgb(3, 14, 61) 100%); 
+  background: rgb(2, 6, 23);
+  background: linear-gradient(
+    93deg,
+    rgba(2, 6, 23, 1) 0%,
+    rgb(5, 8, 49) 44%,
+    rgb(3, 14, 61) 100%
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .wavy-line {
   width: 300px; /* Adjust width as needed */
@@ -130,9 +109,6 @@ background: linear-gradient(93deg, rgba(2,6,23,1) 0%, rgb(5, 8, 49) 44%, rgb(3, 
   }
 }
 
-
-
-
 .lines {
   position: absolute;
   top: 0;
@@ -141,7 +117,6 @@ background: linear-gradient(93deg, rgba(2,6,23,1) 0%, rgb(5, 8, 49) 44%, rgb(3, 
   height: 100%;
   margin: auto;
   width: 100%;
-  /* background-color: #020617; */
 }
 
 .line {
@@ -154,14 +129,19 @@ background: linear-gradient(93deg, rgba(2,6,23,1) 0%, rgb(5, 8, 49) 44%, rgb(3, 
   overflow: hidden;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     height: 15vh;
     width: 100%;
     top: -50%;
     left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fd7e14 75%, #ffffff 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      #fd7e14 75%,
+      #ffffff 100%
+    );
     animation: drop 7s 0s infinite;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
@@ -193,37 +173,41 @@ background: linear-gradient(93deg, rgba(2,6,23,1) 0%, rgb(5, 8, 49) 44%, rgb(3, 
   }
 }
 
-
-
-/* section {
-	width: 100%;
-	margin: 0 auto;
-	line-height: 0;
-	position: relative;
-  height: 100vh;
-  overflow: hidden;
-} */
 section img {
-	width: 100%;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   position: relative;
-  /* bottom: 30rem; */
 }
+
 section article {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	background: white;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
-	mix-blend-mode: lighten;
+  /* position: absolute;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  mix-blend-mode: lighten; */
 }
+
 section div {
-	background: black;
-	height: 25.3vw;
+  background: black;
+  height: 25.3vw;
 }
 section div:nth-of-type(2) {
-	grid-column: 2 / 4;
+  grid-column: 2 / 4;
+}
+
+@media screen and (min-width: 1024px) {
+  section article {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    mix-blend-mode: lighten;
+  }
 }

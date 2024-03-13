@@ -64,10 +64,13 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve backgroundColor={"#0f172a"}>
-     
         <section className="relative w-[100vw] h-[100vh] overflow-hidden">
           <div className="w-[100%] h-[100%] bg-black/50 z-20 absolute top-0 left-0"></div>
-          <img src="/images/pic5.jpeg" alt="" className="w-[100%] h-[100vh] object-cover relative" />
+          <img
+            src="/images/pic5.jpeg"
+            alt=""
+            className="w-[100%] h-[100vh] object-cover relative"
+          />
           <article>
             <div></div>
             <div></div>
@@ -91,13 +94,12 @@ export default function About() {
               </h1>
             </div>
 
-            <h1 className="text-white major flex text-[3rem] text-wrap flex-wrap leading-[5rem] mt-6">
+            <h1 className="text-white major flex text-[2rem] text-wrap flex-wrap leading-[5rem] mt-6">
               I&apos;m Oluwatobiloba, A Fullstack Developer
             </h1>
           </div>
         </div>
-        {/* <ProfileSlider /> */}
-        <div className="flex mt-24 justify-center px-[1rem] rubik">
+        <div className="flex mt-14 lg:mt-24 justify-center px-[1rem] rubik">
           <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
             <div className="xl:w-4/12 relative">
               <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
@@ -122,7 +124,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex justify-center madimi mt-20 lg:mt-40">
+        <div className="flex justify-center px-[1rem] madimi mt-20 lg:mt-40">
           <div className="relative z-10 container flex gap-12 flex-col xl:flex-row ">
             <div className="xl:w-4/12 relative">
               {/* <div> */}
@@ -150,7 +152,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex justify-center madimi mt-20 lg:mt-40">
+        <div className="flex justify-center madimi px-[1rem] mt-20 lg:mt-40">
           <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
             <div className="xl:w-4/12 relative">
               <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">

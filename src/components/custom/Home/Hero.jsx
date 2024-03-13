@@ -98,7 +98,7 @@ export const HomeHero = () => {
           <h1 className="text-4xl">Welcome</h1>
          </div>
 
-        <h1 className="h_title mt-8 top-4 flex w-full flex-col lg:items-center justify- lg:text-center text-[15vw] font-light uppercase leading-[90%] lg:flex-row lg:text-[8.7vw] ">
+        <h1 className="h_title mt-8 mb-[1rem] lg:mb-0 top-4 flex w-full flex-col lg:items-center justify- lg:text-center text-[15vw] font-light uppercase leading-[90%] lg:flex-row lg:text-[8.7vw] ">
           <Magnetic>
             <div
               ref={heroInfiniteRef}

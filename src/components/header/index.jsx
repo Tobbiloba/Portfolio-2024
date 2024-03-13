@@ -31,7 +31,7 @@ const Header = forwardRef(function index(props, ref) {
       <div className="flex flex-wrap lg:flex-nowrap lg:pt-7 mt-5 lg:mt-0 pt-3 text-[16px] lg:text-xl lg:h-[3rem] major gap-4 lg:gap-16 items-center justify-end lg:justify-center montserrat">
         <Magnetic>
           <div className="relative z-100">
-            <div className="text-white relative z-[100]">
+            <div className="text-white text-xl relative z-[100]">
               <Link href="/">Home</Link>
             </div>
             <div ref={ref} className={`${styles.bounds}`}></div>
@@ -40,7 +40,7 @@ const Header = forwardRef(function index(props, ref) {
 
         <Magnetic>
           <div className="relative z-100">
-            <div className="text-white relative  z-[100]">
+            <div className="text-white text-xl relative  z-[100]">
               <Link href="/about">About</Link>
             </div>
 
@@ -49,7 +49,7 @@ const Header = forwardRef(function index(props, ref) {
         </Magnetic>
         <Magnetic>
           <div className="relative z-100">
-            <div className="text-white relative z-[100]">
+            <div className="text-white text-xl relative z-[100]">
               <Link href="/portfolio">Portfolio</Link>
             </div>
 
@@ -58,7 +58,7 @@ const Header = forwardRef(function index(props, ref) {
         </Magnetic>
         <Magnetic>
           <div className="relative z-100">
-            <div className="text-white relative z-[100]">
+            <div className="text-white text-xl relative z-[100]">
               <Link href="/contact">Contact</Link>
             </div>
             <div ref={props.fourthRef} className={`${styles.bounds}`}></div>

@@ -11,7 +11,7 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <div className="main">
-<div className="fixed z-[100] top-[90vh] right-[3rem]">
+<div className="fixed z-[100] top-[90vh] right-[1rem] lg:right-[3rem]">
           <AudioPlayer src="/lofi.mp3"/>
           </div>
       <AnimatePresence mode="wait">
