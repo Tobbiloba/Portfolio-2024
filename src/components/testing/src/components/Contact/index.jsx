@@ -116,6 +116,20 @@ const ContactScreen = () => {
     return (
         <motion.div style={{ y }} ref={container} className={styles.contact}>
             <div className={styles.body}>
+                <div className='container mx-auto'>
+                    <h1 className='major text-5xl'>Contact me for <span className='text-primary'>Project / Job</span>. <br /> Thank you.</h1>
+
+                    <div className='grid grid-cols-1 md:grid-cols-2 major gap-16 mt-16'>
+                        <input placeholder='Username' className='outline-b outline-none text-xl border-b-2 major border-primary text-white h-[3rem] bg-transparent px-4'/>
+                        <input placeholder='Email' className='outline-b outline-none text-xl border-b-2 major border-primary text-white h-[3rem] bg-transparent px-4'/>
+                        <input placeholder='Phone No' className='outline-b outline-none text-xl border-b-2 major border-primary text-white h-[3rem] bg-transparent px-4'/>
+                        <input placeholder='Reason Project / Work / Suggestion' className='outline-b outline-none text-xl border-b-2 major border-primary text-white h-[3rem] bg-transparent px-4' />
+                        <textarea  className='outline-b outline-none text-xl border-b-2 major border-primary text-white h-[10rem] bg-transparent px-4' placeholder='Message'/>
+                        <div className='flex justify-end items-end'>
+                        <button className='bg-primary w-[100%] py-3 text-xl rounded-md'>Send Message</button>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.title}>
                     
                     <motion.div style={{ x }} className={styles.buttonContainer}>

@@ -12,7 +12,7 @@ const Header = forwardRef(function index(props, ref) {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
     <div
-      className={`${styles.header} flex flex-col lg:flex-row px-[1rem] lg:px-[7.5%] gap-2 lg:gap-12 w-[100%] relative bottom-[2.5rem] justify-between lg:py-5 lg:items-center`}
+      className={`${styles.header} flex flex-col lg:flex-row px-[1rem] lg:px-[7.5%] gap-2 lg:gap-12 w-[100%] relative bottom-[2.5rem] justify-between lg:py-2 lg:items-center`}
     >
       <Magnetic>
         <div className="flex h-[4rem] items-center just0fy-start lg:justify-center">
@@ -66,7 +66,7 @@ const Header = forwardRef(function index(props, ref) {
         </Magnetic>
       </div>
      {
-      !isMobile &&  <div className="flex justify-end">
+      !isMobile &&  <div className="flex justify-end relative top-4">
       <RoundedButton>Hire Me</RoundedButton>
       </div>
      }

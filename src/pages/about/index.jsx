@@ -1,3 +1,4 @@
+"use client";
 import Curve from "@/components/Layout/Curve";
 import Description from "@/components/testing/src/components/Description";
 import Projects from "@/components/custom/Projects";
@@ -6,6 +7,7 @@ import Experience from "@/components/custom/Projects/components/experiences";
 import Tool from "@/components/custom/Projects/components/tools";
 import Image from "next/image";
 import ProfileSlider from "@/components/custom/Projects/profile carousel";
+import RoundedButton from "@/components/custom/RoundedButton";
 const RoundedText = ({ text }) => {
   const svgStyles = {
     width: "100px", // Set the width and height as needed
@@ -62,9 +64,21 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve backgroundColor={"#0f172a"}>
+     
+        <section className="relative w-[100vw] h-[100vh] overflow-hidden">
+          <div className="w-[100%] h-[100%] bg-black/50 z-20 absolute top-0 left-0"></div>
+          <img src="/images/pic5.jpeg" alt="" className="w-[100%] h-[100vh] object-cover relative" />
+          <article>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </article>
+        </section>
         <div className="flex  justify-center madimi px-[1rem]">
-          <div className="relative z-10 container  flex flex-col items-center justify- gap-12">
-            <div className="relative  h-4">
+          <div className="relative z-10 container flex flex-col gap-12">
+            <div className="relative w-fit h-4">
               <Image
                 src="/images/tag.svg"
                 alt=""
@@ -72,18 +86,17 @@ export default function About() {
                 height={60}
                 className="absolute rotate-45 -right-5"
               />
-              <h1 className="border text-white py-2 px-10 rounded-full text-2xl">
+              <h1 className="major border text-white py-2 px-10 rounded-full text-2xl">
                 Hello
               </h1>
             </div>
 
-            <h1 className="text-white major text-center flex text-[4rem] text-wrap flex-wrap md:text-[6rem] lg:text-[4.5rem] xl:text-[6rem] leading-[9rem] mt-6">
-              I&apos;m Oluwatobiloba,
-             <br /> A Fullstack Developer
+            <h1 className="text-white major flex text-[3rem] text-wrap flex-wrap leading-[5rem] mt-6">
+              I&apos;m Oluwatobiloba, A Fullstack Developer
             </h1>
           </div>
         </div>
-        <ProfileSlider />
+        {/* <ProfileSlider /> */}
         <div className="flex mt-24 justify-center px-[1rem] rubik">
           <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
             <div className="xl:w-4/12 relative">
