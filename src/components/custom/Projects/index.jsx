@@ -78,7 +78,19 @@ const Projects = () => {
   }
 
   return (
-  <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={`${styles.projects} madimi text-white`}>
+  <main 
+  // onTouchMove={(e) => {
+  //   const touch = e.touches[0];
+  //   moveItems(touch.clientX, touch.clientY);
+  // }}
+  onMouseMove={(e) => {
+    moveItems(e.clientX, e.clientY);
+  }}
+
+  // onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} 
+  onMouseEnter={(e) => {moveItems(e.clientX, e.clientY)}}
+  
+   className={`${styles.projects} madimi text-white`}>
     <div className={styles.body}>
       {
         projects.map( (project, index) => {
