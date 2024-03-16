@@ -3,16 +3,14 @@ import { forwardRef } from "react";
 import styles from "./style.module.scss";
 import Magnetic from "../custom/stickyCursor/magnetic";
 import Image from "next/image";
-import SpringButton from "../custom/spring button";
 import Link from "next/link";
-import RoundedButton from "../custom/RoundedButton";
 import { useMediaQuery } from "react-responsive";
 const Header = forwardRef(function index(props, ref) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
     <div
-      className={`${styles.header} flex flex-col lg:flex-row px-[1rem] lg:px-[7.5%] gap-2 lg:gap-12 w-[100%] relative bottom-[2.5rem] justify-between lg:py-2 lg:items-center`}
+      className={`${styles.header} flex flex-col lg:flex-row px-[1rem] xl:px-[7.5%] gap-2 lg:gap-12 w-[100%] relative bottom-[2.5rem] justify-between lg:py-2 lg:items-center`}
     >
       <Magnetic>
         <div className="flex h-[4rem] items-center just0fy-start lg:justify-center">
@@ -65,11 +63,6 @@ const Header = forwardRef(function index(props, ref) {
           </div>
         </Magnetic>
       </div>
-     {
-      !isMobile &&  <div className="flex justify-end relative top-4">
-      <RoundedButton>Hire Me</RoundedButton>
-      </div>
-     }
     </div>
   );
 });

@@ -1,13 +1,10 @@
 "use client";
 import Curve from "@/components/Layout/Curve";
-import Description from "@/components/testing/src/components/Description";
 import Projects from "@/components/custom/Projects";
 import Head from "next/head";
 import Experience from "@/components/custom/Projects/components/experiences";
 import Tool from "@/components/custom/Projects/components/tools";
 import Image from "next/image";
-import ProfileSlider from "@/components/custom/Projects/profile carousel";
-import RoundedButton from "@/components/custom/RoundedButton";
 const RoundedText = ({ text }) => {
   const svgStyles = {
     width: "100px", // Set the width and height as needed
@@ -20,7 +17,6 @@ const RoundedText = ({ text }) => {
 
   const pathStyles = {
     fill: "none",
-    // stroke: 'white',
     strokeWidth: "1",
   };
 
@@ -102,7 +98,7 @@ export default function About() {
         <div className="flex mt-14 lg:mt-24 justify-center px-[1rem] rubik">
           <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
             <div className="xl:w-4/12 relative">
-              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
+              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 major">
                 Services
               </p>
               <h1 className="text-[3.5rem] md:text-[5rem] ml-[2rem] lg:ml-0 text-primary">
@@ -110,9 +106,7 @@ export default function About() {
                 Offer
               </h1>
               <p className="mt-6 text-white major">
-                We help ambitious business like you generate more profits by
-                building awareness, driving web traffic, connecting with
-                customers and growing sales.
+              I am a front-end developer passionate about crafting beautiful, user-friendly, and interactive web interfaces. I specialize in building UIs that are not only visually appealing but also optimized for performance and responsiveness across all devices. 
               </p>
               <div className="relative h-40">
                 <RoundedText text="- services - services - services -" />
@@ -127,7 +121,7 @@ export default function About() {
         <div className="flex justify-center px-[1rem] madimi mt-20 lg:mt-40">
           <div className="relative z-10 container flex gap-12 flex-col xl:flex-row ">
             <div className="xl:w-4/12 relative">
-              {/* <div> */}
+          
               <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 major">
                 Experience
               </p>
@@ -137,11 +131,8 @@ export default function About() {
                 Experience
               </h1>
               <p className="mt-6 text-white major">
-                A specialist in UI/UX design. A passion of mine is designing and
-                solving problems through user experience, primarily on modern
-                UI.
+              I leverage my expertise in the MERN stack (MongoDB, Express.js, React, and Node.js) to deliver exceptional user experiences. Throughout my career, I&apos;ve consistently crafted user-friendly and visually stunning web interfaces.
               </p>
-              {/* </div> */}
               <div className="relative h-32 lg:h-40">
                 <RoundedText text="- experience - experience - experience" />
               </div>
@@ -155,7 +146,7 @@ export default function About() {
         <div className="flex justify-center madimi px-[1rem] mt-20 lg:mt-40">
           <div className="relative z-10 container flex flex-col xl:flex-row gap-12">
             <div className="xl:w-4/12 relative">
-              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 madimi">
+              <p className="text-primary absolute -left-2 lg:-left-12 -rotate-45 top-12 major">
                 Tools
               </p>
               <h1 className="text-[3.5rem] md:text-[5rem] ml-[2rem] lg:ml-0 text-primary rubik">
@@ -164,16 +155,13 @@ export default function About() {
                 Use
               </h1>
               <p className="mt-6 text-white major">
-                A specialist in UI/UX design. A passion of mine is designing and
-                solving problems through user experience, primarily on modern
-                UI.
+              I&apos;m a passionate front-end developer with a knack for crafting user-friendly and visually stunning web interfaces.  Leveraging my expertise in MERN stack, I breathe life into designs, ensuring seamless user experiences across all devices.
               </p>
               <div className="relative h-40">
                 <RoundedText />
               </div>
             </div>
             <div className=" xl:w-8/12">
-              <p className="text-white madimi text-4xl mb-8">Experience</p>
               <Tool />
             </div>
           </div>

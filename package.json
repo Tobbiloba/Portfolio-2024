@@ -26,6 +26,8 @@
     "react-feather": "^2.0.10",
     "react-locomotive-scroll": "^0.2.2",
     "react-responsive": "^9.0.2",
+    "react-toastify": "^10.0.4",
+    "resend": "^3.2.0",
     "sass": "^1.69.5",
     "smooth-scrollbar": "^8.8.4"
   },

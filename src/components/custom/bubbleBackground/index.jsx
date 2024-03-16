@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import styles from './style.module.scss';
+import React, { useEffect, useState } from "react";
+import styles from "./style.module.scss";
 
 const InteractiveComponent = () => {
   const [curX, setCurX] = useState(0);
@@ -8,12 +8,14 @@ const InteractiveComponent = () => {
   const [tgY, setTgY] = useState(0);
 
   useEffect(() => {
-    const interBubble = document.querySelector('.interactive');
+    const interBubble = document.querySelector(".interactive");
 
     const move = () => {
       setCurX((prevCurX) => prevCurX + (tgX - prevCurX) / 20);
       setCurY((prevCurY) => prevCurY + (tgY - prevCurY) / 20);
-      interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      interBubble.style.transform = `translate(${Math.round(
+        curX
+      )}px, ${Math.round(curY)}px)`;
       requestAnimationFrame(move);
     };
 
@@ -22,20 +24,18 @@ const InteractiveComponent = () => {
       setTgY(event.clientY);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     move();
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [curX, curY, tgX, tgY]);
 
   return (
     <div className="text-container border w-40 h-40">
-      {/* Your other JSX code */}
       <div className="gradient-bg">
-        {/* Your gradient background JSX code */}
         <div className="interactive"></div>
       </div>
     </div>

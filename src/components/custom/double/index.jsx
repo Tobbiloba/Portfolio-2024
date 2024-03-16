@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 import { useRef } from "react";
 import Magnetic from "../stickyCursor/magnetic";
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 const Double = ({ projects, reversed }) => {
   const firstImage = useRef(null);
   const secondImage = useRef(null);
@@ -29,8 +29,12 @@ const Double = ({ projects, reversed }) => {
     //Change width of images between 33.33% and 66.66% based on cursor
     const firstImagePercent = 66.66 - currentXPercent * 0.33;
     const secondImagePercent = 33.33 + currentXPercent * 0.33;
-    firstImage.current.style.width = isMobile ? `100%` : `${firstImagePercent}%`;
-    secondImage.current.style.width = isMobile ? `100%` : `${secondImagePercent}%`;
+    firstImage.current.style.width = isMobile
+      ? `100%`
+      : `${firstImagePercent}%`;
+    secondImage.current.style.width = isMobile
+      ? `100%`
+      : `${secondImagePercent}%`;
 
     if (Math.round(xPercent) == Math.round(currentXPercent)) {
       window.cancelAnimationFrame(requestAnimationFrameId);
@@ -54,34 +58,40 @@ const Double = ({ projects, reversed }) => {
             alt={"image"}
             className="h-[20rem]"
           />
-          {
-            projects[0].url &&
-          <div className="w-14 h-14 cursor-pointer bg-white absolute flex items-center justify-center right-0 -bottom-4 rounded-full lg:-right-4">
-            <a target="_blank" href={projects[0].url} className=" items-center justify-center px-4">
-              <Image
-                src={`/right-arrow.png`}
-                // fill={true}
-                alt={"image"}
-                width={32}
-                height={20}
-                className=" -rotate-45"
-              />
-            </a>
-          </div>}
-          {
-            projects[0].github && 
-          <div className="w-14 h-14 cursor-pointer bg-white absolute flex items-center justify-center right-16 -bottom-4 rounded-full lg:right-14">
-            <a href={projects[0].github} target="_blank" className=" items-center justify-center">
-              <Image
-                src={`https://cdn-icons-png.flaticon.com/128/270/270798.png`}
-                // fill={true}
-                alt={"image"}
-                width={32}
-                height={20}
-                className=""
-              />
-            </a>
-          </div> }
+          {projects[0].url && (
+            <div className="w-14 h-14 cursor-pointer bg-white absolute flex items-center justify-center right-0 -bottom-4 rounded-full lg:-right-4">
+              <a
+                target="_blank"
+                href={projects[0].url}
+                className=" items-center justify-center px-4"
+              >
+                <Image
+                  src={`/right-arrow.png`}
+                  alt={"image"}
+                  width={32}
+                  height={20}
+                  className=" -rotate-45"
+                />
+              </a>
+            </div>
+          )}
+          {projects[0].github && (
+            <div className="w-14 h-14 cursor-pointer bg-white absolute flex items-center justify-center right-16 -bottom-4 rounded-full lg:right-14">
+              <a
+                href={projects[0].github}
+                target="_blank"
+                className=" items-center justify-center"
+              >
+                <Image
+                  src={`https://cdn-icons-png.flaticon.com/128/270/270798.png`}
+                  alt={"image"}
+                  width={32}
+                  height={20}
+                  className=""
+                />
+              </a>
+            </div>
+          )}
         </div>
         <div className={`${styles.body} py-[1rem] px-[1rem] lg:px-[2rem]`}>
           <h3 className="text- mt-4 text-center text-2xl major text-white">
@@ -114,57 +124,65 @@ const Double = ({ projects, reversed }) => {
             </div>
             <p className="gap-4 lg:gap-8 flex  flex-col lg:flex-row">
               Duration:
-              <span className="major">
-                {projects[0].duration}
-              </span>
+              <span className="major">{projects[0].duration}</span>
             </p>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Functionalities:
               <ul className="major flex flex-col text-start">
-                {projects[0].functionalities.map((item, index) => <div key={index} className="flex items-start gap-4">
-                  <div className="w-3 h-3 mt-2 rounded-full bg-white"></div>
-                  <li className="flex-1">{item}</li>
-                </div>)}
+                {projects[0].functionalities.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-3 h-3 mt-2 rounded-full bg-white"></div>
+                    <li className="flex-1">{item}</li>
+                  </div>
+                ))}
               </ul>
             </p>
           </div>
         </div>
       </div>
 
-
-
-      <div ref={secondImage} className={`${styles.imageContainer} mt-20 lg:mt-0`}>
+      <div
+        ref={secondImage}
+        className={`${styles.imageContainer} mt-20 lg:mt-0`}
+      >
         <div className={styles.stretchyWrapper}>
           <Image src={`/${projects[1].src}`} fill={true} alt={"image"} />
-          {
-            projects[1].url && <div className="w-14 h-14 bg-white cursor-pointer absolute flex items-center justify-center  -bottom-4 rounded-full left-1 lg:-left-4">
-            <a target="_blank" href={projects[1].url} className=" items-center justify-center px-4">
-              <Image
-                src={`/right-arrow.png`}
-                // fill={true}
-                alt={"image"}
-                width={32}
-                height={20}
-                className=" -rotate-45"
-              />
-            </a>
-          </div>
-          }
-  {
-            projects[1].github && 
-          <div className="w-14 h-14 bg-white absolute cursor-pointer flex items-center justify-center  -bottom-4 rounded-full left-16 lg:left-14">
-            <a href={projects.github} target="_blank" className=" items-center justify-center">
-              <Image
-                src={`https://cdn-icons-png.flaticon.com/128/270/270798.png`}
-                // fill={true}
-                alt={"image"}
-                width={32}
-                height={20}
-                className=""
-              />
-            </a>
-          </div>
-}
+          {projects[1].url && (
+            <div className="w-14 h-14 bg-white cursor-pointer absolute flex items-center justify-center  -bottom-4 rounded-full left-1 lg:-left-4">
+              <a
+                target="_blank"
+                href={projects[1].url}
+                className=" items-center justify-center px-4"
+              >
+                <Image
+                  src={`/right-arrow.png`}
+                  // fill={true}
+                  alt={"image"}
+                  width={32}
+                  height={20}
+                  className=" -rotate-45"
+                />
+              </a>
+            </div>
+          )}
+          {projects[1].github && (
+            <div className="w-14 h-14 bg-white absolute cursor-pointer flex items-center justify-center  -bottom-4 rounded-full left-16 lg:left-14">
+              <a
+                href={projects.github}
+                target="_blank"
+                className=" items-center justify-center"
+              >
+                <Image
+                  src={`https://cdn-icons-png.flaticon.com/128/270/270798.png`}
+                  // fill={true}
+                  alt={"image"}
+                  width={32}
+                  height={20}
+                  className=""
+                />
+              </a>
+            </div>
+          )}
         </div>
         <div className={`${styles.body} py-[1rem] px-[1rem] lg:px-[2rem]`}>
           <h3 className="text- mt-4 lg:text-center text-2xl major text-white">
@@ -197,17 +215,17 @@ const Double = ({ projects, reversed }) => {
             </div>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Duration:
-              <span className="major">
-                {projects[1].duration}
-              </span>
+              <span className="major">{projects[1].duration}</span>
             </p>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Functionalities:
               <ul className="major flex flex-col text-start">
-                {projects[1].functionalities.map((item, index) => <div key={index} className="flex items-start gap-4">
-                  <div className="w-3 h-3 mt-2 rounded-full bg-white"></div>
-                  <li className="flex-1">{item}</li>
-                </div>)}
+                {projects[1].functionalities.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-3 h-3 mt-2 rounded-full bg-white"></div>
+                    <li className="flex-1">{item}</li>
+                  </div>
+                ))}
               </ul>
             </p>
           </div>
