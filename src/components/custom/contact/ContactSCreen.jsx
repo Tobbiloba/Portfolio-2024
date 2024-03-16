@@ -62,7 +62,7 @@ const ContactScreen = () => {
                 <form className='container mx-auto' onSubmit={Submit}>
                     <h1 className='major text-3xl lg:text-5xl'>Contact me for <span className='text-primary'>Project / Job</span>. <br /> Thank you.</h1>
 
-                    <div className='grid grid-cols-1 md:grid-cols-2 major gap-16 mt-16'>
+                    <div className='md:grid flex flex-col grid-cols-1 md:grid-cols-2 major gap-16 mt-16'>
                         <input name="username" placeholder='Username' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
                         <input name='email' placeholder='Email' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
                         <input name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
