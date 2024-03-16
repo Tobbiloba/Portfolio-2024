@@ -4,13 +4,11 @@ import Image from 'next/image';
 import Rounded from '../Rounded/Rounded';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from '../stickyCursor/magnetic';
-
+import { toast } from 'react-toastify';
+import ResendMail from '@/utils/sendEmail';
 const ContactScreen = () => {
-    const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("+234 ")
-    const [reason, setReason] = useState("")
-    const [message, setMessage] = useState("")
+    const [loading, setLoading] = useState(false)
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -20,30 +18,70 @@ const ContactScreen = () => {
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
 
+    const hasEmptyFields = (formData) => {
+        for (const pair of formData.entries()) {
+          
+          if (String(pair[1]).trim() === "") {
+            return true;
+          }
+        //   return false
+        }
+        return false;
+      };
+
+      const Submit = async (e) => {
+        e.preventDefault();
+        const formEle = e.target;
+        const formDatab = new FormData(formEle);
+        formDatab.append("phone_no", phone);
+
+        if(hasEmptyFields(formDatab)) {
+            toast.info("Please fill in all fields", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+              return;
+        }
+       
+        
+        setLoading(true);
+
+        ResendMail({formDatab, setLoading})
+       
+        
+      };
     return (
         <motion.div style={{ y }} ref={container} className={`${styles.contact} mt-[5rem] px-[1rem] lg:mt-0`}>
             <div className={styles.body}>
-                <div className='container mx-auto'>
+                <form className='container mx-auto' onSubmit={Submit}>
                     <h1 className='major text-3xl lg:text-5xl'>Contact me for <span className='text-primary'>Project / Job</span>. <br /> Thank you.</h1>
 
                     <div className='grid grid-cols-1 md:grid-cols-2 major gap-16 mt-16'>
-                        <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' className='outline-b outline-none text-xl border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
-                        <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='outline-b outline-none text-xl border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
-                        <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='outline-b outline-none text-xl border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
-                        <input value={reason} onChange={(e) => setReason(e.target.value)} placeholder='Reason: Project / Work / Suggestion' className='outline-b outline-none text-xl border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4' />
-                        <textarea value={message} onChange={(e) => setMessage(e.target.value)}  className='outline-b outline-none text-xl border-b-2 major border-orange-200 text-white h-[10rem] bg-transparent px-4' placeholder='Message'/>
+                        <input name="username" placeholder='Username' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
+                        <input name='email' placeholder='Email' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
+                        <input name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
+                        <input name="reason" placeholder='Reason: Project / Work / Suggestion' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4' />
+                        <textarea name="message"  className='outline-b outline-none text-[15px] lg:text-[17px]  col-span-2 border-b-2 major border-orange-200 text-white h-[10rem] bg-transparent px-4' placeholder='Message'/>
                         <div className='flex justify-end items-end'>
                         
-                        <button className='bg-orange-= w-[100%] py-3 text-xl rounded-md'>
+                        <button className='bg-orange-= w-[100%] py-3 text-[15px] lg:text-[17px] rounded-md' type='submit'>
                           
                         <Rounded>
-                              <p>Send Message</p>
+                              <p>{
+                                loading ? "Please wait..." : "Send message"
+                              }</p>
                               </Rounded>
                             </button>
                         
                         </div>
                     </div>
-                </div>
+                </form>
                 <div className={`${styles.title} mt-40 border`}>
                     
                     <motion.div style={{ x }} className={styles.buttonContainer}>
