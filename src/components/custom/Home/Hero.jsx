@@ -48,11 +48,11 @@ export const HomeHero = () => {
           <h1 className="text-4xl">Welcome</h1>
         </div>
 
-        <h1 className="h_title mt-8 mb-[1rem] lg:mb-0 top-4 flex w-full flex-col lg:items-center justify- lg:text-center text-[15vw] font-light uppercase leading-[90%] lg:flex-row lg:text-[8.7vw] ">
+        <h1 className="h_title mt-8 mb-[10vh] lg:mb-0 lg:top-4 flex w-full flex-col lg:items-center justify- lg:text-center text-[15vw] font-light uppercase leading-[90%] lg:flex-row lg:text-[8.7vw] ">
           <Magnetic>
             <div
               ref={heroInfiniteRef}
-              className="font_aeonik flex justify-center text-[15px] items-center bottom-[-25vw] left-[35%] ml-10 -mr-10 w-72 overflow-hidden rounded-full border border-primary font-normal uppercase opacity-0 lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] h-10 lg:h-14 lg:w-[16vw] lg:leading-10 "
+              className="font_aeonik flex justify-center text-[17px] items-center bottom-[-25vw] left-[35%] ml-10 -mr-10 w-72 overflow-hidden rounded-full border border-primary font-normal uppercase opacity-0 lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] h-12 lg:h-14 lg:w-[16vw] lg:leading-10 "
             >
               <marquee direction="left" behavior="scroll" scrollamount="5">
                 <div className="group mont flex gap-8 h-full cursor-pointer items-center whitespace-nowrap">
