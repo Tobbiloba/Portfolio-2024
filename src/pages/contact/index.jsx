@@ -1,6 +1,6 @@
 import Curve from '@/components/Layout/Curve'
 import Head from 'next/head'
-import ContactScreen from '@/components/audio/testing/src/components/Contact'
+import ContactScreen from '@/components/custom/contact/ContactSCreen'
 export default function Contact() {
   return (
     <>
