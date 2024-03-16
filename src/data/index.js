@@ -70,7 +70,7 @@ export const projects = [
     src: "projects/keanaclone1.png",
     year: 2024,
     programmingLanguages: ["ReactJs", "Tailwindcss", "AOS"],
-    role: "Frontend Project",
+    role: "Frontend",
     duration: "Dec 2023 - Feb 2023",
     personal: true,
     functionalities: [
@@ -82,7 +82,7 @@ export const projects = [
     url: "https://keana-clone-v2.vercel.app/",
   },
   {
-    name: "Inframent",
+    name: "Inframent 'Netherlands'",
     description:
       "Inframent is a cutting-edge technology startup that provides AI-powered solutions to streamline data extraction for contractors in the telecom industry. ",
     src: "projects/inframent2.png",
@@ -95,9 +95,9 @@ export const projects = [
       "Maptiler",
       "Material Ui",
     ],
-    role: "Frontend Project",
+    role: "Frontend Developer",
     duration: "Sept 2023 - Jan 2024",
-    personal: true,
+    personal: false,
     functionalities: [
       "Unified Filtering for Web and Mobile Applications",
       "Secure Signup/Signin Authentication",
@@ -128,7 +128,7 @@ export const projects = [
   },
   {
     name: "NIKE Store",
-    description: "I contributed to the development of a clothing store project, allowing users to explore a diverse range of clothing brands.",
+    description: "I spearheaded the frontend development of a dynamic Nike e-commerce platform, empowering users to seamlessly browse through an extensive collection of Nike apparel and footwear.",
     src: "projects/Tobbie.png",
     year: 2023,
     programmingLanguages: [
@@ -199,7 +199,7 @@ export const projects = [
       "Aos",
       "Chakra Ui"
     ],
-    role: "Frontend Developer",
+    role: "Frontend Freeelance",
     duration: "Nov 2022 - Mar 2023",
     personal: false,
     functionalities: [
@@ -220,7 +220,7 @@ export const projects = [
       "Css",
       "Aos"
     ],
-    role: "Frontend Developer",
+    role: "Frontend Project",
     duration: "May 2023 - May 2023",
     personal: true,
     functionalities: [
@@ -243,7 +243,7 @@ export const projects = [
         "Date picker",
         "Material UI"
       ],
-      role: "Frontend Developer",
+      role: "Frontend Project",
       duration: "April 2023 - May 2023",
       personal: true,
       functionalities: [
@@ -264,7 +264,7 @@ export const projects = [
           "Tailwindcss",
           "Material Ui"
       ],
-      role: "Frontend Developer",
+      role: "Frontend Project",
       duration: "June 2023 - June 2023",
       personal: true,
       functionalities: [
@@ -284,7 +284,7 @@ export const projects = [
         "Reactjs",
         "Tailwind css"
       ],
-      role: "Frontend Developer",
+      role: "Frontend Project",
       duration: "Apri; 2023 - April 2023",
       personal: true,
       functionalities: [
