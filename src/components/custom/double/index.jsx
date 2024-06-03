@@ -94,19 +94,19 @@ const Double = ({ projects, reversed }) => {
           )}
         </div>
         <div className={`${styles.body} py-[1rem] px-[1rem] lg:px-[2rem]`}>
-          <h3 className="text- mt-4 text-center text-2xl major text-white">
+          <h3 className="text- mt-4 text-center text-2xl mont text-white">
             {projects[0].name}
           </h3>
-          <p className="lg:text-center mt-2 major text-slate-300 text-[14px]">
+          <p className="lg:text-center mt-2 mont text-slate-300 text-[18px]">
             {projects[0].description}
           </p>
           <div className="flex flex-col lg:flex-row flex-wrap gap-x-12 gap-y-4 mt-6 text-white lg:text-center text-[16px]">
             <p className="gap-4 lg:gap-8 flex  flex-col lg:flex-row">
-              Role: <span className="major">{projects[0].role}</span>
+              Role: <span className="mont">{projects[0].role}</span>
             </p>
             <p className="gap-4 lg:gap-8 flex  flex-col lg:flex-row">
               Type:
-              <span className="major">
+              <span className="mont">
                 {projects[0].personal ? "Personal Project" : "Work "}
               </span>
             </p>
@@ -115,7 +115,7 @@ const Double = ({ projects, reversed }) => {
               <div className="flex flex-row flex-wrap items-center gap-4 gap-y-2 lg:gap-x-8">
                 {projects[0].programmingLanguages.map((item, index) => (
                   <Magnetic key={index}>
-                    <p className="text-white text-[14px] major border-b w-fit">
+                    <p className="text-white text-[17px] mont border-b w-fit">
                       {item}
                     </p>
                   </Magnetic>
@@ -124,11 +124,11 @@ const Double = ({ projects, reversed }) => {
             </div>
             <p className="gap-4 lg:gap-8 flex  flex-col lg:flex-row">
               Duration:
-              <span className="major">{projects[0].duration}</span>
+              <span className="mont">{projects[0].duration}</span>
             </p>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Functionalities:
-              <ul className="major flex flex-col text-start">
+              <ul className="mont flex flex-col text-start">
                 {projects[0].functionalities.map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="w-3 h-3 mt-2 rounded-full bg-white"></div>
@@ -185,28 +185,28 @@ const Double = ({ projects, reversed }) => {
           )}
         </div>
         <div className={`${styles.body} py-[1rem] px-[1rem] lg:px-[2rem]`}>
-          <h3 className="text- mt-4 lg:text-center text-2xl major text-white">
+          <h3 className="text- mt-4 lg:text-center text-2xl mont text-white">
             {projects[1].name}
           </h3>
-          <p className="lg:text-center mt-2 major text-slate-300 text-[14px]">
+          <p className="lg:text-center mt-2 mont text-slate-300 text-[18px]">
             {projects[1].description}
           </p>
           <div className="flex flex-wrap gap-x-12 gap-y-4 mt-6 text-white lg:text-center text-[16px]">
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
-              Role: <span className="major">{projects[0].role}</span>
+              Role: <span className="mont">{projects[0].role}</span>
             </p>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Type:
-              <span className="major">
+              <span className="mont">
                 {projects[1].personal ? "Personal Project" : "Work "}
               </span>
             </p>
             <div className="flex flec-col lg:flex-row gap-4 lg:gap-8 h-fit">
-              <p className="text-white">Tools:</p>
+              <p className="text-white ">Tools:</p>
               <div className="flex flex-row flex-wrap items-center gap-4 gap-y-2 lg:gap-x-8">
                 {projects[1].programmingLanguages.map((item, index) => (
                   <Magnetic key={index}>
-                    <p className="text-white text-[14px] major border-b w-fit">
+                    <p className="text-white text-[18px] mont border-b w-fit">
                       {item}
                     </p>
                   </Magnetic>
@@ -215,7 +215,7 @@ const Double = ({ projects, reversed }) => {
             </div>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Duration:
-              <span className="major">{projects[1].duration}</span>
+              <span className="mont">{projects[1].duration}</span>
             </p>
             <p className="gap-4 lg:gap-8 flex flex-col lg:flex-row">
               Functionalities:
@@ -223,7 +223,7 @@ const Double = ({ projects, reversed }) => {
                 {projects[1].functionalities.map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="w-3 h-3 mt-2 rounded-full bg-white"></div>
-                    <li className="flex-1">{item}</li>
+                    <li className="flex-1 mont text-[18px]">{item}</li>
                   </div>
                 ))}
               </ul>

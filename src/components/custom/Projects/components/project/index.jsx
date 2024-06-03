@@ -17,7 +17,7 @@ export default function index({ index, title, manageModal }) {
         0{index + 1}
         <span className="ml-2 text-primary">/</span>
       </p>
-      <h2 className="major text-2xl lg:text-[40px]">{title}</h2>
+      <h2 className="madimi text-2xl lg:text-[40px]">{title}</h2>
       <img src="/right-arrow.png" alt="" className="-rotate-45 w-10" />
     </div>
   );

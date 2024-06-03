@@ -60,14 +60,14 @@ const ContactScreen = () => {
         <motion.div style={{ y }} ref={container} className={`${styles.contact} mt-[5rem] px-[1rem] lg:mt-0`}>
             <div className={styles.body}>
                 <form className='container mx-auto' onSubmit={Submit}>
-                    <h1 className='major text-3xl lg:text-5xl'>Contact me for <span className='text-primary'>Project / Job</span>. <br /> Thank you.</h1>
+                    <h1 className='mont text-3xl lg:text-5xl'>Contact me for <span className='text-primary'>Project / Job</span>. <br /> Thank you.</h1>
 
-                    <div className='md:grid flex flex-col grid-cols-1 md:grid-cols-2 major gap-16 mt-16'>
-                        <input name="username" placeholder='Username' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
-                        <input name='email' placeholder='Email' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
-                        <input name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
-                        <input name="reason" placeholder='Reason: Project / Work / Suggestion' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 major border-orange-200 text-white h-[3rem] bg-transparent px-4' />
-                        <textarea name="message"  className='outline-b outline-none text-[15px] lg:text-[17px]  col-span-2 border-b-2 major border-orange-200 text-white h-[10rem] bg-transparent px-4' placeholder='Message'/>
+                    <div className='md:grid flex flex-col grid-cols-1 md:grid-cols-2 mont gap-16 mt-16'>
+                        <input name="username" placeholder='Username' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 mont border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
+                        <input name='email' placeholder='Email' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 mont border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
+                        <input name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 mont border-orange-200 text-white h-[3rem] bg-transparent px-4'/>
+                        <input name="reason" placeholder='Reason: Project / Work / Suggestion' className='outline-b outline-none text-[15px] lg:text-[17px]  border-b-2 mont border-orange-200 text-white h-[3rem] bg-transparent px-4' />
+                        <textarea name="message"  className='outline-b outline-none text-[15px] lg:text-[17px]  col-span-2 border-b-2 mont border-orange-200 text-white h-[10rem] bg-transparent px-4' placeholder='Message'/>
                         <div className='flex justify-end items-end'>
                         
                         <button className='bg-orange-= w-[100%] py-3 text-[15px] lg:text-[17px] rounded-md' type='submit'>
@@ -86,7 +86,7 @@ const ContactScreen = () => {
                     
                     <motion.div style={{ x }} className={styles.buttonContainer}>
                         <Rounded backgroundColor={"#fd7e14"} className={styles.button}>
-                            <p className='major'>Contact</p>
+                            <p className='mont'>Contact</p>
                         </Rounded>
                     </motion.div>
                     
@@ -102,7 +102,7 @@ const ContactScreen = () => {
                 </div>
                 <div className={`${styles.info}`}>
                   
-                    <div className='major grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-20 lg:gap-x-20 gap-y-10'>
+                    <div className='mont grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-20 lg:gap-x-20 gap-y-10'>
                         <span>
                             <h3>socials</h3>
                             <Magnetic>
